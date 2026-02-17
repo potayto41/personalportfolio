@@ -52,14 +52,14 @@ const Experience = () => {
     <motion.section
       id="experience"
       className="min-h-screen flex items-center justify-center px-6 py-24"
-      initial={{ opacity: 0 }}
+      initial={false}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-4xl w-full">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -75,7 +75,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.company}
-              initial={{ opacity: 0, y: 30 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}

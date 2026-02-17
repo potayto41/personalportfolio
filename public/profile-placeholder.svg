@@ -1,0 +1,18 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Profile placeholder</title>
+  <desc id="desc">A gradient circle avatar placeholder.</desc>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="80" x2="560" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E3A8A"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="220" y1="120" x2="420" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" rx="320" fill="url(#bg)"/>
+  <circle cx="320" cy="245" r="105" fill="rgba(255,255,255,0.92)"/>
+  <path d="M132 548c22-98 104-165 188-165s166 67 188 165" fill="rgba(255,255,255,0.9)"/>
+  <circle cx="220" cy="170" r="160" fill="url(#shine)"/>
+</svg>

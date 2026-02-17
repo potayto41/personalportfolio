@@ -9,14 +9,14 @@ const Contact = () => {
     <motion.section
       id="contact"
       className="min-h-screen flex items-center justify-center px-6 py-24 bg-slate-50"
-      initial={{ opacity: 0 }}
+      initial={false}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-2xl w-full text-center">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -26,7 +26,7 @@ const Contact = () => {
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -37,7 +37,7 @@ const Contact = () => {
 
         {/* Contact Options */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -68,7 +68,7 @@ const Contact = () => {
 
         {/* LinkedIn */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -88,7 +88,7 @@ const Contact = () => {
 
         {/* Closing Message */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}

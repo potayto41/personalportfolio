@@ -8,7 +8,7 @@ import { FaLinkedin } from 'react-icons/fa';
 const Hero = () => {
   return (
     <motion.section
-      initial={{ opacity: 0 }}
+      initial={false}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="bg-white text-gray-800 py-20"
@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
         <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-5xl font-bold mb-4"
@@ -24,7 +24,7 @@ const Hero = () => {
             Mahe Muntaser
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-2xl text-gray-600 mb-6"
@@ -32,7 +32,7 @@ const Hero = () => {
             Technical Support Professional | Systems-Oriented Problem Solver
           </motion.p>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mb-8"
@@ -40,7 +40,7 @@ const Hero = () => {
             Product-focused professional with a Computer Science background. Experienced in structured troubleshooting, client communication, and translating complex issues into actionable technical solutions.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
             className="flex flex-col md:flex-row items-center md:items-start"
@@ -60,7 +60,7 @@ const Hero = () => {
             </a>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
             className="mt-6 flex items-center justify-center md:justify-start"
@@ -77,14 +77,14 @@ const Hero = () => {
           </motion.div>
         </div>
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={false}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="md:w-1/3 flex justify-center"
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <Image
-              src="https://i.ibb.co/d4V03y6/342205953-249563270830337-3313931393799632386-n.jpg"
+              src="/profile-placeholder.svg"
               alt="Mahe Muntaser - Technical Support Professional"
               fill
               className="rounded-full shadow-lg object-cover"

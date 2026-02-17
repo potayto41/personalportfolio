@@ -33,14 +33,14 @@ const Achievements = () => {
     <motion.section
       id="achievements"
       className="min-h-screen flex items-center justify-center px-6 py-24"
-      initial={{ opacity: 0 }}
+      initial={false}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-3xl w-full">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -53,7 +53,7 @@ const Achievements = () => {
           {achievements.map((achievement, index) => (
             <motion.div
               key={achievement.title}
-              initial={{ opacity: 0, x: -20 }}
+              initial={false}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
