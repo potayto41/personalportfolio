@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -54,15 +54,17 @@ const Contact = () => {
             mahemuntaser94@gmail.com
           </motion.a>
 
-          {/* Download CV */}
+          {/* GitHub */}
           <motion.a
-            href="/path-to-your-cv.pdf"
-            download
+            href="https://github.com/potayto41"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-300"
+            className="inline-flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-900 transition-colors duration-300"
           >
-            Download CV
+            <FaGithub size={20} />
+            GitHub
           </motion.a>
         </motion.div>
 

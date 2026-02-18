@@ -46,11 +46,10 @@ const Hero = () => {
             className="flex flex-col md:flex-row items-center md:items-start"
           >
             <a
-              href="/path-to-your-cv.pdf"
-              download
+              href="mailto:mahemuntaser94@gmail.com?subject=CV%20Request"
               className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors duration-300 mb-4 md:mb-0 md:mr-4"
             >
-              Download CV
+              Request CV
             </a>
             <a
               href="#projects"
@@ -90,6 +89,7 @@ const Hero = () => {
               className="rounded-full shadow-lg object-cover"
               priority
               sizes="(max-width: 768px) 256px, 320px"
+              unoptimized
             />
           </div>
         </motion.div>
