@@ -77,7 +77,7 @@ const Contact = () => {
           <a
             href="/path-to-your-cv.pdf"
             download
-            className="inline-flex items-center justify-center rounded-2xl bg-primary-700 px-8 py-3.5 text-base font-semibold text-white shadow-md transition-colors duration-200 hover:bg-primary-800"
+            className="inline-flex items-center justify-center rounded-2xl bg-primary-700 px-8 py-3.5 text-base font-semibold text-white hover:text-white shadow-md transition-colors duration-200 hover:bg-primary-800"
           >
             Download CV
           </a>
