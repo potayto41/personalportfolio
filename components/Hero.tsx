@@ -46,7 +46,7 @@ const Hero = () => {
             className="flex flex-col md:flex-row items-center md:items-start"
           >
             <a
-              href="/path-to-your-cv.pdf"
+              href="/Mahe-Muntaser-CV.pdf"
               download
               className="bg-primary-700 text-white hover:text-white px-6 py-3 rounded-2xl shadow-md hover:bg-primary-800 transition-colors duration-200 mb-4 md:mb-0 md:mr-4"
             >
