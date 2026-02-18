@@ -1,10 +1,22 @@
-import { Config } from 'tailwindcss'
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    './app/**/*.{ts,tsx,js,jsx}',
-    './components/**/*.{ts,tsx,js,jsx}',
-    './src/**/*.{ts,tsx,js,jsx}'
+    './app/**/*.{js,ts,jsx,tsx,md,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,md,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,md,mdx}'
+  ],
+  safelist: [
+    'text-primary',
+    'bg-primary',
+    'text-slate-500',
+    'text-slate-600',
+    'text-slate-700',
+    'text-slate-800',
+    'md:pr-8',
+    'md:pl-8',
+    'md:text-right',
+    'md:ml-auto',
+    'md:w-1/2'
   ],
   theme: {
     extend: {
@@ -30,5 +42,3 @@ const config: Config = {
   },
   plugins: []
 }
-
-export default config

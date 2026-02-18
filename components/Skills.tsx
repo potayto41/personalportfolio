@@ -3,81 +3,107 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-interface SkillCategory {
+interface CapabilityGroup {
   title: string;
+  description: string;
   skills: string[];
 }
 
-const skillCategories: SkillCategory[] = [
+const capabilityGroups: CapabilityGroup[] = [
   {
-    title: 'Technical',
-    skills: ['Python', 'SQL Server', 'HTML', 'CSS', 'Entity Framework Core']
+    title: 'Technical Systems & Tools',
+    description:
+      'Technologies and environments I actively use to build, debug, and analyze systems.',
+    skills: [
+      'Python',
+      'SQL Server',
+      'Entity Framework Core',
+      'HTML',
+      'CSS',
+      'REST APIs',
+      'Git',
+      'Debugging Tools',
+      'System Log Analysis'
+    ]
   },
   {
-    title: 'Troubleshooting & Support',
-    skills: ['Root Cause Analysis', 'Issue Triage', 'SLA Adherence', 'Structured Debugging']
+    title: 'Troubleshooting & Support Methodology',
+    description:
+      'Structured approach to diagnosing issues and maintaining operational stability.',
+    skills: [
+      'Root Cause Analysis',
+      'Issue Triage',
+      'SLA Adherence',
+      'Incident Documentation',
+      'Reproducible Bug Reporting',
+      'Escalation Handling',
+      'QA Collaboration',
+      'Test Case Validation',
+      'Workflow Optimization'
+    ]
   },
   {
-    title: 'Business & Communication',
-    skills: ['Stakeholder Communication', 'Cross-Functional Collaboration', 'Analytical Reporting']
+    title: 'Operational & Communication Strengths',
+    description:
+      'Cross-functional coordination and stakeholder-focused execution.',
+    skills: [
+      'International Client Communication',
+      'Cross-Functional Collaboration',
+      'Technical Translation (Complex → Simple)',
+      'Process Improvement',
+      'Analytical Reporting',
+      'Conflict Resolution',
+      'Team Coordination',
+      'Decision Support'
+    ]
   }
 ];
 
 const Skills = () => {
   return (
-    <motion.section
-      id="skills"
-      className="min-h-screen flex items-center justify-center px-6 py-24 bg-slate-50"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="max-w-5xl w-full">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-3xl font-bold text-slate-800 mb-12 text-center"
+    <section id="skills" className="w-full px-6 py-24 bg-slate-50">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={false}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.35 }}
+          className="mb-14"
         >
-          Skills & Competencies
-        </motion.h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Core Capabilities</h2>
+          <p className="mt-4 text-base md:text-lg text-slate-600 max-w-4xl leading-relaxed">
+            Structured technical capabilities built through hands-on troubleshooting, client support, and system-level problem solving.
+          </p>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {skillCategories.map((category, categoryIndex) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 + categoryIndex * 0.1 }}
-              className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm"
+        <div className="space-y-8">
+          {capabilityGroups.map((group, index) => (
+            <motion.article
+              key={group.title}
+              initial={false}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.35, delay: index * 0.05 }}
+              className="rounded-2xl border border-slate-200 bg-slate-100/60 p-8 md:p-10 shadow-sm transition-shadow duration-200 hover:shadow-md"
             >
-              <h3 className="text-lg font-semibold text-slate-800 mb-4">
-                {category.title}
-              </h3>
+              <h3 className="text-2xl font-semibold text-slate-900">{group.title}</h3>
+              <p className="mt-2 text-slate-600">{group.description}</p>
 
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill, skillIndex) => (
-                  <motion.span
+              <div className="mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                {group.skills.map((skill) => (
+                  <span
                     key={skill}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: 0.3 + categoryIndex * 0.1 + skillIndex * 0.05 }}
-                    whileHover={{ scale: 1.05 }}
-                    className="px-3 py-2 bg-primary-50 border border-primary-200 text-primary-700 text-sm font-medium rounded-full transition-all duration-300 hover:border-primary-400 hover:shadow-md"
+                    className="inline-flex items-center rounded-md border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-700"
                   >
                     {skill}
-                  </motion.span>
+                  </span>
                 ))}
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
