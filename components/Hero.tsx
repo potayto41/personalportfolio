@@ -96,7 +96,7 @@ const Hero = () => {
               src="/portfolio_image.png"
               alt="Mahe Muntaser - Technical Support Professional"
               fill
-              className="rounded-full shadow-lg object-cover object-[center_30%]"
+              className="shadow-lg object-contain"
               priority
               sizes="(max-width: 768px) 256px, 320px"
             />
