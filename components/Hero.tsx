@@ -93,7 +93,7 @@ const Hero = () => {
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <Image
-              src="/profile-placeholder.svg"
+              src="/portfolio_image.png"
               alt="Mahe Muntaser - Technical Support Professional"
               fill
               className="rounded-full shadow-lg object-cover"

@@ -61,7 +61,8 @@ const projects: Project[] = [
       'Designed modular UI components with responsive layout and clear information hierarchy.',
     keyOutcome:
       'Created recruiter-focused portfolio emphasizing systems thinking and clarity.',
-    techStack: ['Next.js', 'Tailwind CSS', 'TypeScript']
+    techStack: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    liveDemoUrl: 'https://intellisample-1.onrender.com'
   }
 ];
 
