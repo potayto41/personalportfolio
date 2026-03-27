@@ -12,19 +12,21 @@ interface Project {
   approach: string;
   keyOutcome: string;
   techStack: string[];
+  liveDemoUrl?: string;
 }
 
 const projects: Project[] = [
   {
     id: 1,
-    title: 'High-Performance Distributed Web Scraper',
+    title: 'Dynamic-System-Risk-Simulator',
     overview:
-      'Engineered a scalable scraping system designed to collect and structure high-volume web data for analysis workflows.',
-    problem: 'Manual data extraction was inefficient and inconsistent.',
+      'Built an interactive simulation platform to model system risk behavior under changing variables and stress scenarios.',
+    problem: 'Risk evaluation was static and did not reflect dynamic system behavior under varying conditions.',
     approach:
-      'Implemented concurrent scraping architecture with structured parsing and storage pipeline.',
-    keyOutcome: 'Improved data collection efficiency and reduced manual preprocessing.',
-    techStack: ['Python', 'Async Processing', 'Data Parsing', 'REST Integration']
+      'Implemented a dynamic simulation engine with configurable inputs, scenario control, and visualization for outcomes.',
+    keyOutcome: 'Enabled clearer risk forecasting through real-time scenario simulation and comparative analysis.',
+    techStack: ['Python', 'Simulation Modeling', 'Data Visualization', 'Web Deployment'],
+    liveDemoUrl: 'https://dynamic-system-risk-simulator-2.onrender.com/'
   },
   {
     id: 2,
@@ -133,6 +135,17 @@ const Projects = () => {
                 >
                   View Details
                 </button>
+
+                {project.liveDemoUrl && (
+                  <a
+                    href={project.liveDemoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 ml-3 inline-flex items-center rounded-lg border border-primary-300 bg-primary-50 px-4 py-2.5 text-sm font-semibold text-primary-700 transition-colors duration-200 hover:bg-primary-100"
+                  >
+                    Live Demo
+                  </a>
+                )}
               </motion.article>
             ))}
           </div>

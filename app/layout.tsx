@@ -1,14 +1,24 @@
 import './globals.css'
 import Navbar from '../components/Navbar'
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Mahe Muntaser - Technical Support Professional & Problem Solver',
-  description: 'Product-focused technical support professional with Computer Science background. Experienced in troubleshooting, client communication, and QA. Located in Dhaka, Bangladesh.',
+export const metadata: Metadata = {
+  title: {
+    default: 'Mahe Muntaser | Technical Support Portfolio',
+    template: '%s | Mahe Muntaser'
+  },
+  description: 'Technical support and QA portfolio of Mahe Muntaser, focused on troubleshooting, reliability, and system-oriented problem solving.',
   keywords: 'technical support, QA, problem solver, computer science, systems engineering, support professional',
-  author: 'Mahe Muntaser',
+  applicationName: 'Mahe Muntaser Portfolio',
+  authors: [{ name: 'Mahe Muntaser' }],
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg'
+  },
   openGraph: {
-    title: 'Mahe Muntaser - Technical Support Professional & Problem Solver',
-    description: 'Product-focused technical support professional with Computer Science background. Experienced in troubleshooting, client communication, and QA.',
+    title: 'Mahe Muntaser | Technical Support Portfolio',
+    description: 'Technical support and QA portfolio highlighting projects, skills, and system-focused problem solving.',
     url: 'https://mahemuntaser.com',
     siteName: 'Mahe Muntaser Portfolio',
     locale: 'en_US',
@@ -24,8 +34,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mahe Muntaser - Technical Support Professional',
-    description: 'Product-focused technical support professional with Computer Science background.'
+    title: 'Mahe Muntaser | Technical Support Portfolio',
+    description: 'Technical support and QA portfolio highlighting projects, skills, and system-focused problem solving.'
   }
 }
 
