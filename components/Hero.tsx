@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -46,9 +46,9 @@ const Hero = () => {
             className="flex flex-col md:flex-row items-center md:items-start"
           >
             <a
-              href="/path-to-your-cv.pdf"
+              href="/Mahe-Muntaser-CV.pdf"
               download
-              className="bg-primary-700 text-white hover:text-white px-6 py-3 rounded-2xl shadow-md hover:bg-primary-800 transition-colors duration-200 mb-4 md:mb-0 md:mr-4"
+              className="bg-primary-700 !text-white hover:!text-white px-6 py-3 rounded-2xl shadow-md hover:bg-primary-800 transition-colors duration-200 mb-4 md:mb-0 md:mr-4"
             >
               Download CV
             </a>
@@ -63,7 +63,7 @@ const Hero = () => {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="mt-6 flex items-center justify-center md:justify-start"
+            className="mt-6 flex items-center gap-4 justify-center md:justify-start"
           >
             <p className="mr-4">Dhaka, Bangladesh</p>
             <a
@@ -73,6 +73,15 @@ const Hero = () => {
               className="text-gray-600 hover:text-blue-600 transition-colors duration-300"
             >
               <FaLinkedin size={24} />
+            </a>
+            <a
+              href="https://github.com/potayto41"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold !text-white hover:!text-white transition-colors duration-200 hover:bg-slate-800"
+            >
+              <FaGithub size={16} />
+              GitHub Profile
             </a>
           </motion.div>
         </div>
@@ -84,10 +93,10 @@ const Hero = () => {
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <Image
-              src="/profile-placeholder.svg"
+              src="/portfolio_image.png"
               alt="Mahe Muntaser - Technical Support Professional"
               fill
-              className="rounded-full shadow-lg object-cover"
+              className="shadow-lg object-contain"
               priority
               sizes="(max-width: 768px) 256px, 320px"
             />
